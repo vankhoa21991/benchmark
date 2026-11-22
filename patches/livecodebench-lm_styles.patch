@@ -1,0 +1,26 @@
+diff --git a/lcb_runner/lm_styles.py b/lcb_runner/lm_styles.py
+index d10b211..32db94a 100644
+--- a/lcb_runner/lm_styles.py
++++ b/lcb_runner/lm_styles.py
+@@ -861,6 +861,21 @@ LanguageModelList: list[LanguageModel] = [
+         datetime(2024, 4, 1),
+         "https://huggingface.co/agentica-org/DeepCoder-14B-Preview",
+     ),
++    ## Local llama.cpp models (OpenAI-compatible endpoint, see OPENAI_BASE_URL / OPENAI_KEY)
++    LanguageModel(
++        "qwen3.8-27b",
++        "Qwen3.8-27B (Q4, llama.cpp)",
++        LMStyle.OpenAIChat,
++        datetime(2026, 1, 1),
++        "local",
++    ),
++    LanguageModel(
++        "qwen3.8-flashnext-coder",
++        "Qwen3.8-Flash-Next-Coder (llama.cpp)",
++        LMStyle.OpenAIChat,
++        datetime(2026, 1, 1),
++        "local",
++    ),
+ ]
+ 
+ LanguageModelStore: dict[str, LanguageModel] = {

@@ -1,0 +1,11 @@
+# Used via: mini-extra swebench -c swebench.yaml -c config/extra/swebench.yaml ...
+#
+# Switch models by editing model_name + model_kwargs:
+#   Qwen3.8 27B (Q4)      -> model_name: "openai/qwen3.8-27b",      api_key: "aikeytake"
+#   Qwen3.8 Flash Next    -> model_name: "openai/flashnext-coder",  api_key: "local"
+model:
+  cost_tracking: "ignore_errors"   # local models are free; cost is always 0
+  model_name: "openai/qwen3.8-27b"
+  model_kwargs:
+    api_base: "http://127.0.0.1:8080/v1"
+    api_key: "aikeytake"
